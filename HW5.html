@@ -1,0 +1,35 @@
+<!--
+    Michael Kellems
+    9/4/24
+    CIT 215
+    Prof. Kane
+-->
+
+<html>
+    <head>
+        <h1> Made by Michael Kellems for CIT 215.</h1>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let sentryvalue = ""
+
+        const lotteryNumber = function() { //define lotterNumber
+            return(1+Math.floor(Math.random() * 49))
+        }
+
+        var lotterynumbers = getSixNumbers(); // use of hoisting for fun :)
+
+        function getSixNumbers() { //define getSixNumbers
+            for (let i = 0; i < 6; i++) {
+                sentryvalue+= " " + lotteryNumber()
+            }
+
+            return sentryvalue
+        }
+        sentryvalue = ""
+
+        console.log(lotterynumbers)
+    </script>
+</html>
